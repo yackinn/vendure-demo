@@ -1,0 +1,3 @@
+{
+    "exec": "ts-node src/compile-admin-ui.ts"
+}

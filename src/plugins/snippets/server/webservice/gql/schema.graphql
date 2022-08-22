@@ -1,0 +1,8 @@
+type Language {
+  locale: String!
+  snippetSet: String!
+}
+
+extend type Query {
+  languages(id: ID!): Language!
+}

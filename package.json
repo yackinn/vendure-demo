@@ -1,0 +1,34 @@
+{
+    "name": "vendure-demo",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "run:server": "ts-node ./src/index.ts",
+        "run:worker": "ts-node ./src/index-worker.ts",
+        "start": "concurrently yarn:run:*",
+        "start:dev": "concurrently yarn:start:dev:*",
+        "start:dev:server": "yarn nodemon --config nodemon-server.json",
+        "start:dev:admin-ui": "ts-node src/compile-admin-ui.ts",
+        "build": "tsc",
+        "migration:generate": "ts-node migration generate",
+        "migration:run": "ts-node migration run",
+        "migration:revert": "ts-node migration revert"
+    },
+    "dependencies": {
+        "@nestjs/apollo": "^10.0.22",
+        "@vendure/admin-ui-plugin": "1.6.5",
+        "@vendure/asset-server-plugin": "1.6.5",
+        "@vendure/core": "1.6.5",
+        "@vendure/email-plugin": "1.6.5",
+        "@vendure/ui-devkit": "^1.6.5",
+        "nodemon": "^2.0.19",
+        "pg": "8.7.3",
+        "typescript": "4.3.5"
+    },
+    "devDependencies": {
+        "@types/wait-on": "^5.3.1",
+        "concurrently": "7.3.0",
+        "ts-node": "10.9.1",
+        "wait-on": "^6.0.1"
+    }
+}

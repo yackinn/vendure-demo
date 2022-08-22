@@ -1,0 +1,6 @@
+{
+    "ignore": ["src/plugins/**/ui/*"],
+    "watch": ["src"],
+    "ext": "ts",
+    "exec": "ts-node ./src/index"
+}
